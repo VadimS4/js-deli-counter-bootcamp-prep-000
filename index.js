@@ -6,6 +6,8 @@ function takeANumber(katzDeli, name){
   
   //push name of customer to end of array
   katzDeli.push(name);
+  
+  //.length property returns the legth of the array.
   return ("Welcome, " + name + ". You are number " + katzDeli.length + " in line." );
 }
 
@@ -17,6 +19,8 @@ function nowServing(katzDeli){
     return ("There is nobody waiting to be served!");
   }
   else {
+    
+    //.shift removes an item from the beginning of the array.
     return "Currently serving " + katzDeli.shift() + ".";
   }
 }
@@ -34,6 +38,8 @@ function currentLine(katzDeli){
   for ( var i = 0; i < katzDeli.length; i++){
     line.push( i + 1 + ". " + katzDeli[i]);
   }
+  
+  //.join joins elements of an array and returns them as a string
   return "The line is currently: " + line.join(', ');
   
 }
